@@ -1,0 +1,1 @@
+enum ResponseStatus { error, sucesso }
