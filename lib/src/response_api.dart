@@ -49,8 +49,8 @@ class ResponseApi {
   }
 
   Response error({required String message}) {
-    return Response.forbidden(
-      json.encode({
+    return Response.badRequest(
+      body: json.encode({
         'status': ResponseStatus.error.name,
         'message': message,
       }),
