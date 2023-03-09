@@ -4,7 +4,10 @@ import 'package:logger/logger.dart';
 abstract class DataBaseService<T> {
   final logger = Logger(filter: CustomFilterLog());
 
-  Future<T> exec(String query);
+  Future<T> exec({
+    required String query,
+    Map<String, dynamic>? substitutionValues,
+  });
 
   void log(String query, e) {
     logger.d(
